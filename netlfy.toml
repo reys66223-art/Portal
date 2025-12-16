@@ -1,0 +1,17 @@
+# File konfigurasi untuk Netlify
+
+[build]
+  # Perintah untuk membangun situs. Karena ini situs statis, kita tidak perlu perintah apapun.
+  # Netlify akan otomatis menggunakan folder ini.
+  command = "echo 'No build command required'"
+  
+  # Folder tempat file-file siap deploy berada. Dalam kasus ini, adalah folder root.
+  publish = "."
+
+# Aturan pengalihan (redirects) bersifat opsional, tapi sangat berguna.
+# Contoh: jika Anda ingin semua halaman yang tidak ditemukan tetap menampilkan index.html
+# (berguna jika situs Anda berkembang menjadi Single Page Application).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
